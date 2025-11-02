@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../assets/curelink.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../CSS/main.css">
+
+    <title>About CURE LINK</title>
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="/">
+                    <img src="../assets/curelink.png" width="100px" alt="">
+                    <span>CURE LINK</span>
+                </a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="./HTML/aboutUs.html">About Us</a></li>
+                    <li><a href="./HTML/bookAppointment.html">Book an Appointments</a></li>
+                    <li><a href="./HTML/myAppointments.html">My Appointments</a></li>
+                    <li><a href="./HTML/contactUs.html">Contact Us</a></li>
+                </ul>
+            </nav>
+            <!-- <button class="btn-login">Login</button> -->
+        </div>
+    </header>
+
+
+    <main>
+        <section class="container register_container">
+            <div class="heading">
+                <h3>Create Your CureLink Account</h3>
+                <p>Join CureLink to book doctor appointments with ease and manage your healthcare in one place.</p>
+            </div>
+            <div class="register-form">
+                <form action="" id="register-form">
+                    <div class="form-inputs">
+                        <label for="name" class="nameLabel">Name</label>
+                        <input type="text" name="name" id="regNameInp">
+                        <label for="age" class="ageLabel">Age</label>
+                        <input type="number" name="age" id="regAgeInp">
+                        <label for="email" class="emailLabel">Email</label>
+                        <input type="email" name="Email" id="regEmailInp" required>
+                        <!-- <label for="role" class="roleLabel">Role</label>
+                    <input type="text" value="USER" name="role" id="regRoleInp" readonly> -->
+                        <label for="password" class="passwordLabel">Password</label>
+                        <input type="password" name="password" id="regPasswordInp" required>
+                    </div>
+                    <button type="submit" id="register-btn">Register</button>
+                </form>
+            </div>
+            <div class="">
+                <p>Already have an account?
+                    <a href="./login.html">Login</a>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-about">
+                <h3>CURE LINK</h3>
+                <p>Your trusted healthcare partner for easy and fast doctor appointments.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Our Doctors</a></li>
+                    <li><a href="#">Book Appointment</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact</h4>
+                <p><i class="fa-solid fa-envelope"></i>support@curelink.com</p>
+                <p><i class="fa-solid fa-phone"></i>+92 300 1234567</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2025 curelink. All rights reserved.</p>
+        </div>
+    </footer>
+
+
+
+    <script src="https://kit.fontawesome.com/6c4078df96.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+    <script type="module" src="../JS/auth/register.js"></script>
+</body>
+
+</html>

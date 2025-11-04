@@ -1,0 +1,38 @@
+/* ===== LAYOUT.CSS ===== */
+
+header {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 1rem 0;
+}
+
+header .logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+main {
+  min-height: 80vh;
+  padding: 2rem 0;
+}
+
+footer {
+  background: var(--secondary-color);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3 {
+  grid-template-columns: repeat(3, 1fr);
+}

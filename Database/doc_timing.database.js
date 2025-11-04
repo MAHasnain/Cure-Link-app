@@ -17,3 +17,17 @@ export const getAllDrTimings = async () => {
     console.log(data);
     return data;
 };
+export const getDrTimingsById = async (id) => {
+    const { data, error } = await supabaseClient
+        .from('Doctor_timings')
+        .select()
+        .eq("id", id)
+
+    if (error) {
+        console.log(error);
+        return error;
+    }
+
+    console.log(data);
+    return data;
+};

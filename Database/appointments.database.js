@@ -19,16 +19,19 @@ export const getAllAppointments = async () => {
 };
 
 export const createNewAppointment = async (appointmentData) => {
-    const { error } = await supabaseClient
+    const { data, error } = await supabaseClient
         .from('Appointments')
         .insert(
             appointmentData
         )
+        .select()
 
     if (error) {
-        console.log(error);
+        console.error(error);
         return error;
     }
+    console.log(data);
+    return data
 }
 
 export const updateAppointment = async (appointmentId, appointmentData) => {

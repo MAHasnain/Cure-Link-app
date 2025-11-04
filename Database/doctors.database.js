@@ -17,3 +17,18 @@ export const getAllDoctors = async () => {
     console.log(data);
     return data;
 };
+
+export const getDoctorById = async (doctorId) => {
+    const { data, error } = await supabaseClient
+        .from('Doctors')
+        .select()
+        .eq("id", doctorId)
+
+    if (error) {
+        console.log(error);
+        return error;
+    }
+
+    console.log(data);
+    return data;
+};

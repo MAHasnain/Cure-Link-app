@@ -33,6 +33,9 @@ document.addEventListener("DOMContentLoaded", async () => {
             e.preventDefault();
             const signedOutUser = await signOutUser();
             console.log(signedOutUser);
+            if (signOutUser) {
+                window.location.href = `../HTML/login.html`;
+            }
         })
 
         const drAllCards = document.querySelectorAll(".doctorCard");

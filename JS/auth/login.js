@@ -1,8 +1,19 @@
-import { signInUser } from "../../Database/allMethods.js";
+import { getUserSession, signInUser } from "../../Database/allMethods.js";
 
 const loginEmailInp = document.querySelector("#loginEmailInp");
 const loginPassInp = document.querySelector("#loginPassInp");
 const loginForm = document.querySelector("#loginForm");
+
+const sessionCheck = async () => {
+    const userSession = await getUserSession();
+    console.log(userSession);
+
+    if (userSession.session) {
+        window.location.href = `/`
+    }
+}
+
+sessionCheck();
 
 loginForm.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -18,7 +29,7 @@ loginForm.addEventListener("submit", async (e) => {
         if (signedInUser.session) {
             window.location.href = `/index.html`;
         }
-    
+
     } catch (error) {
         console.error(error)
         return error;

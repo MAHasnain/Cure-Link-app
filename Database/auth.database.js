@@ -52,6 +52,7 @@ export const signOutUser = async () => {
         console.error(error);
         return error
     }
+    return true;
 }
 
 export const getUserSession = async () => {
